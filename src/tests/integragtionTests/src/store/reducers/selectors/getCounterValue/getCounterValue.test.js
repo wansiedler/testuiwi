@@ -1,11 +1,11 @@
-import {getCounterValue} from "./getCounterValue";
+import { getCounterValue } from "./getCounterValue";
 
-describe('getCounterValue', () => {
-    test('work with empty state', () => {
+describe("getCounterValue", () => {
+    test("work with empty state", () => {
         expect(getCounterValue({})).toBe(0)
     })
 
-    test('work with filled state', () => {
+    test("work with filled state", () => {
         expect(getCounterValue({
             counter: {
                 value: 100
@@ -13,3 +13,4 @@ describe('getCounterValue', () => {
         })).toBe(100)
     })
 })
+

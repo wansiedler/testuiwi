@@ -1,4 +1,4 @@
-import { getData } from "./getData";
+import { getData } from "./getData.ts";
 import axios from "axios";
 
 jest.mock("axios");

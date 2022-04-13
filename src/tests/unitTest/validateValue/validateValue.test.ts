@@ -1,4 +1,4 @@
-import { validateValue } from "./validateValue";
+import { validateValue } from "./validateValue.ts";
 
 test("Value validation", () => {
 	expect(validateValue(50)).toBe(true);
