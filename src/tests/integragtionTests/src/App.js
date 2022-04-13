@@ -26,8 +26,8 @@
 //
 // export default App;
 
-import React from 'react';
-import {BrowserRouter, Routes, Route, Link} from "react-router-dom";
+import React from "react";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import MainPage from "./pages/MainPage";
 import AboutPage from "./pages/AboutPage";
 import ErrorPage from "./pages/ErrorPage";

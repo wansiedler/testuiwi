@@ -1,7 +1,7 @@
-import {createReduxStore} from "../../store/store";
-import {Provider} from "react-redux";
+import { createReduxStore } from "../../store/store";
+import { Provider } from "react-redux";
 import AppRouter from "../../router/AppRouter";
-import {MemoryRouter} from "react-router-dom";
+import { MemoryRouter } from "react-router-dom";
 
 export const renderTestApp = (component, options) => {
     const store = createReduxStore(options?.initialState);

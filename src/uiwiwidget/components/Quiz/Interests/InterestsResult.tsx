@@ -1,10 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ProgressBar from "../../ProgressBar/ProgressBar";
 import { Logo } from "../Logo/Logo";
 import { getRandomInt, capitalizeFirstLetter } from "../../../util";
 import { Question } from "../Question";
 import { selectQuiz, useAppDispatch, useAppSelector } from "../../../store/RTKstore";
-import { useEffect } from "react";
 import { setFinished, setShowProgress } from "../../../store/features/quiz/quizSlice";
 import { newsLetter } from "../../../quizAction";
 import { themes } from "../../../types";

@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { selectQuiz, useAppDispatch, useAppSelector } from "../../../store/RTKstore";
-import { setSize } from "../../../store/features/quiz/quizSlice";
-import { setFinished } from "../../../store/features/quiz/quizSlice";
+import { setSize , setFinished } from "../../../store/features/quiz/quizSlice";
 import { sizes } from "../../../types";
 import IncomeTitle from "./IncomeTitle";
 

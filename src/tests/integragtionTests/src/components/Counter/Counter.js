@@ -1,7 +1,7 @@
-import React from 'react';
-import {useDispatch, useSelector} from "react-redux";
-import {getCounterValue} from "../../store/reducers/selectors/getCounterValue/getCounterValue";
-import {decrement, increment} from "../../store/reducers/counterReducer";
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getCounterValue } from "../../store/reducers/selectors/getCounterValue/getCounterValue";
+import { decrement, increment } from "../../store/reducers/counterReducer";
 
 const Counter = () => {
     const dispatch = useDispatch()
