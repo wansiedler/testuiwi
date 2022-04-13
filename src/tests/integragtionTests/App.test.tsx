@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import { App } from "./uiwiwidget/App";
+import { App } from "../../uiwiwidget/App";
 
 test("App rendered", () => {
 	const { container } = render(<App/>);
@@ -10,4 +10,4 @@ test("App rendered", () => {
 
 	expect(linkElement).toBeInTheDocument();
 });
- 
+
