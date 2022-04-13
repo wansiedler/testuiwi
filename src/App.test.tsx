@@ -10,3 +10,4 @@ test("App rendered", () => {
 
 	expect(linkElement).toBeInTheDocument();
 });
+ 
