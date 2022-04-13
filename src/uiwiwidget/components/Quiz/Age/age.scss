@@ -1,0 +1,513 @@
+@import "src/uiwiwidget/styles/abstracts/variables";
+
+$age-vote-wrapper: #C9C9C9;
+$progress-bar-filler: #AEABAC;
+$progress-bar-filler-result: #AEABAC;
+$arrows: #707070;
+
+
+.age {
+  .slider-labels-container {
+    width: 90%;
+    display: flex;
+    flex-flow: row wrap;
+    font: 18px $font-default-serif;
+  }
+
+  .left-text,
+  .right-text {
+    width: 50%;
+  }
+
+  .left-text {
+    text-align: left;
+  }
+
+  .right-text {
+    text-align: right;
+  }
+
+  .politik {
+    .question {
+      opacity: 0.4;
+      background: no-repeat top center/100% url("./images/politik-background.jpeg") !important;
+    }
+  }
+
+  .grill {
+    .question {
+    }
+
+    .question-overlay {
+      background: no-repeat bottom right/100% url("./images/grill-backgroundd.jpg") !important;
+    }
+
+    .slider-wrapper .slider-thumb {
+      //height: 40px;
+      //width: 40px;
+      //border: 0;
+      //border-radius: 40px;
+      //background: $primary-grill;
+
+      background: center center/100% url("./images/tracker.png");
+      width: 52px;
+      height: 92px;
+      border-radius: 0;
+      //border-left: 25px solid transparent;
+      //border-right: 25px solid transparent;
+      //border-top: 55px solid red;
+      //background: none;
+    }
+
+    .slider-labels-container {
+      bottom: 12%;
+    }
+
+    .slider-wrapper:after {
+      width: 100%;
+      height: 20px;
+      content: " ";
+      background: repeating-linear-gradient(90deg,transparent,transparent 20px,#9a9a9a 0,#9a9a9a 25.5px) 50%;
+
+    }
+
+
+    .id-uiwi-label, .id-uiwi-label_inline, .id-uiwi-label_ergebnis {
+      background: $primary-grill;
+      border-radius: 0;
+      //color: #fff;
+    }
+
+    .progress-bar-wrapper {
+      display: table-row;
+      all: revert;
+    }
+
+    .progress-selected, .progresss {
+      display: table-cell;
+      width: 70%;
+
+    }
+
+    .id-uiwi-span.left_tab {
+      background: none;
+      display: table-cell;
+      padding: 10px 10px;
+      width: 86px;
+      text-decoration: none;
+      text-align: center;
+      color: #000;
+      -webkit-border-top-left-radius: 0;
+      -webkit-border-top-right-radius: 15px;
+      -moz-border-radius-topleft: 0;
+      -moz-border-radius-topright: 15px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 15px;
+    }
+
+    .progress-bar-wrapper {
+      margin-top: 15px;
+    }
+
+    .age-group-progress-bar-wrapper .progress-bar-filler, .age-result-progress-bar-wrapper .progress-bar-filler {
+      background: $primary-grill;
+    }
+
+    .progress-bar-wrapper {
+      //margin-top: 27px;
+
+      .progress-bar {
+        width: 85%;
+        //height: 20px;
+
+      }
+    }
+  }
+}
+
+.ageVote {
+  .quiz {
+    position: relative;
+  }
+
+  .subtitle, .slider-wrapper, .slider-labels-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .subtitle {
+    bottom: 35%;
+  }
+
+  .slider-labels-container {
+    bottom: 17%;
+  }
+
+  /*.arrows-wrapper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 20%;
+    height: 36px;
+
+    .left-arrows {
+      width: 50px;
+      left: -20%;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .right-arrows {
+      width: 50px;
+      left: 20%;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .left-arrows, .right-arrows {
+      position: absolute;
+      font-size: 35px;
+      bottom: 30%;
+      color: $arrows;
+      text-shadow: 0 3px 6px $box-shadow-alt;
+      -webkit-user-select: none;
+      user-select: none;
+      z-index: 0;
+    }
+  }*/
+
+  .slider-wrapper {
+    width: 300px;
+    //margin: 80px auto 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    bottom: 20%;
+
+    .slider-outer-wrapper,
+    .slider-wrapper-background,
+    .slider-bar-wrapper {
+      width: 100%;
+    }
+
+    .slider-bar-wrapper,
+    .slider-wrapper-background {
+      height: 15px;
+    }
+
+    .slider-wrapper-background {
+      opacity: 0.9;
+    }
+
+    .slider-outer-wrapper {
+      height: 36px;
+      display: flex;
+      transform: scale(1);
+      cursor: pointer;
+    }
+
+    .slider-thumb {
+      height: 40px;
+      width: 40px;
+      border-radius: 40px;
+      border: 0;
+    }
+
+    .slider-dot {
+      height: 15px;
+      width: 15px;
+      border-radius: 15px;
+    }
+  }
+
+  .grill {
+    .left-text, .right-text {
+      color: $black;
+    }
+  }
+
+  .politik {
+    .slider-bar-wrapper {
+      background: $age-vote-wrapper;
+
+      .slider-thumb, .slider-dot {
+        background: $primary-politik;
+      }
+    }
+  }
+}
+
+.ageGroup {
+  .subtitle {
+    margin-top: 20px;
+  }
+
+  .politik {
+    .subtext {
+      font-size: 22px;
+      margin: 20px 0 10px 0;
+    }
+
+    .progress-bar-wrapper {
+      margin-top: 27px;
+
+      .progress-bar {
+        width: 85%;
+        height: 20px;
+
+        .progress-bar-filler {
+          background: $progress-bar-filler;
+        }
+      }
+    }
+  }
+}
+
+.ageResult {
+  .subtitle {
+    margin-top: 40px;
+  }
+
+  .left_tab {
+    font: normal normal normal 20px/23px Arial;
+  }
+
+  .left_tab.selected {
+    font-weight: bold;
+  }
+
+  .progress-bar-wrapper {
+    margin-top: 15px;
+
+    .progress-bar-label {
+      width: inherit;
+    }
+
+    .progress-bar-filler {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .grill {
+    .progress-bar-wrapper {
+      display: flex;
+      justify-content: center;
+      column-gap: 20px;
+      margin-bottom: 30px;
+
+      .result-label {
+        font: normal normal normal 22px/26px Arial;
+      }
+
+      .slider-wrapper:after {
+        background: repeating-linear-gradient(90deg, transparent 3px, transparent 13px, #9A9A9A 14px, #9A9A9A 15px) center;
+      }
+
+      .slider-wrapper {
+        &:after {
+          display: block;
+          height: 10px;
+          margin-top: 5px;
+        }
+
+        .slider-bar-wrapper {
+          height: 10px;
+          width: 160px;
+          background: $age-result-black;
+
+          .slider-thumb {
+            width: 20px;
+            height: 35px;
+            background: center center/100% url("./images/tracker_black.png");
+
+            &.selected {
+              background: center center/100% url("./images/tracker.png");
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .politik, .grill {
+    .left_tab {
+      font-size: 20px;
+    }
+
+    .round {
+      height: 20px;
+
+      .progress-bar {
+        height: inherit;
+        width: 87%;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        .progress-bar-label {
+          position: absolute;
+        }
+      }
+    }
+
+    .progress-bar-filler {
+      box-shadow: 0 3px 6px #0000004D;
+    }
+
+    .progress-bar-filler, .left_tab {
+      background: $progress-bar-filler;
+    }
+
+    .progress-selected {
+      .progress-bar-filler {
+        background: $primary-politik;
+      }
+    }
+  }
+
+  .slider-bar-wrapper {
+    background: $darkBlueTraditionalist;
+  }
+
+}
+
+/*
+.age-quiz-background {
+  height: 100%;
+}
+
+.age-quiz-background,
+.age-quiz-start-headline-container {
+  width: 100%;
+}
+
+.age-quiz-start-headline-container {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  justify-content: center;
+  min-height: 153px;
+  vertical-align: bottom;
+  text-align: center;
+  opacity: 1;
+  color: $black;
+}
+
+.small .age-quiz-start-headline-container {
+  min-height: 123px;
+  width: 70%;
+}
+
+.age-quiz-start-primary-headline,
+.age-quiz-start-secondary-headline {
+  font: normal normal bold 25px/33px $font-default;
+}
+
+.age-quiz-start-secondary-headline {
+  margin-bottom: 20px;
+}
+*/
+
+.small .id-uiwi-h2 {
+  text-align: center;
+  font: normal normal bold 22px/30px Arial;
+  letter-spacing: 0;
+  color: #363636;
+  opacity: 1;
+  padding-bottom: 10px;
+}
+
+.medium .progress-bar-wrapper {
+  margin-top: 5px;
+}
+
+.progress-bar {
+  padding: 0;
+  margin: 0;
+  height: 15px;
+  border-radius: 0 50px 50px 0;
+}
+
+.medium .progress-bar {
+  height: 10px;
+}
+
+.progress-bar-filler {
+  transition: width 1s ease-in-out;
+  height: 15px;
+  border-radius: inherit;
+  text-align: right;
+}
+
+//if (round) {
+//styles.containerStyles.borderRadius = "50px";
+//styles.containerStyles.backgroundColor = (limbicType === "harmoniser") ? "#B7988E" : "#16193C";
+//// styles.containerStyles.height = 25;
+//styles.containerStyles.margin = "0 auto";
+//// styles.labelStyles.margin = '0 30px 0 0'
+
+//styles.labelStyles.color = "white";
+//styles.labelStyles.minWidth = "100px";
+//styles.labelStyles.textAlign = "left";
+//styles.labelStyles.float = "left";
+//styles.labelStyles.margin = "5px 0 0 15px";
+//styles.labelStyles.display = "inline-block";
+//}
+//if (left) {
+//styles.containerStyles.margin = "0";
+//styles.containerStyles.borderRadius = "0 50px 50px 0";
+//}
+
+.progress-bar-label {
+  font-size: 14px;
+  padding: 0 15px;
+  min-width: 150px !important;
+  display: inline-block;
+
+  //float: left;
+}
+
+/**************
+ AGE VOTE SLIDE
+ **************/
+
+.medium .subtitle {
+  margin: 0 auto;
+}
+
+.medium .slider-wrapper {
+  margin-top: 30px;
+}
+
+/**************
+ AGE START SLIDE
+ *************
+.age-start-slider-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  justify-content: center;
+  width: 100%;
+  min-height: 161px;
+  vertical-align: bottom;
+  text-align: center;
+  -webkit-clip-path: ellipse(80% 100% at 50% 100%);
+  clip-path: ellipse(52% 100% at 50% 100%);
+  opacity: 0.87;
+}
+
+.small .start-slider-overlay {
+  min-height: 161px;
+  clip-path: ellipse(52% 100% at 50% 100%);
+}
+*/

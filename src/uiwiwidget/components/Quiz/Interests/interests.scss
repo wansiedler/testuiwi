@@ -1,0 +1,254 @@
+@import "src/uiwiwidget/styles/abstracts/variables";
+
+@keyframes blinker {
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.interest.interestsSelect {
+  .politik {
+    .choices {
+      margin-top: 0;
+
+      .id-uiwi-label {
+        margin-top: 8px;
+      }
+    }
+  }
+
+  .grill {
+    .question-overlay {
+      height: 160px;
+    }
+  }
+
+}
+
+.interest, .age {
+  .politik {
+    .choices {
+      margin-top: 80px;
+
+      .id-uiwi-label {
+        margin-top: 12px;
+      }
+    }
+
+    .question {
+      opacity: 0.5;
+      background: no-repeat center center/100% url("./images/politik-background.jpeg");
+    }
+  }
+
+  .grill {
+    background: $white;
+
+    .question-overlay {
+      all: revert;
+      height: 240px;
+      width: 100%;
+      margin-bottom: 60px;
+      //background-image: url("./images/grill-background.jpg");
+      background-size: cover;
+      background: no-repeat bottom right/175% url("./images/grill-background.jpg");
+      //margin-bottom: 80px;
+      display: flex;
+      flex-direction: column;
+      z-index: -1;
+
+      justify-content: center;
+
+      .id-uiwi-span {
+        font-size: 0.5em;
+      }
+    }
+
+    .choices {
+      margin-top: 10px;
+      z-index: 10;
+      position: relative;
+    }
+
+    .question {
+      all: revert;
+    }
+
+
+    .question-header {
+      all: revert;
+      min-height: 140px;
+      font: normal normal bold 23px/32px Arial;
+      color: $white;
+      opacity: 1;
+      padding: 0;
+      z-index: 1;
+      transform: rotate(-8deg) scale(1.1, 1.1) translate(0, 20px);
+      background: transparent linear-gradient(257deg, $primary-grill 0%, $orange-grill 100%) 0% 0% no-repeat padding-box;
+      margin-top: auto;
+
+      .id-uiwi-h3 {
+        margin: 10px auto;
+      }
+
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+    }
+
+    #age_result {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+    }
+
+    .progress_array {
+      width: 100%;
+      background: $white;
+    }
+
+    .progress {
+      background: $primary-grill;
+    }
+
+    .progress_wrapper {
+      opacity: 1;
+      background: $white;
+    }
+
+    .choices {
+
+      .id-uiwi-label {
+        all: revert;
+        background: $primary-grill 0% 0% no-repeat padding-box;
+        box-shadow: 0px 4px 8px #0000008C;
+
+        opacity: 1;
+        text-align: center;
+        width: 290px;
+        line-height: 44px;
+        display: inline-block;
+        float: left;
+        vertical-align: middle;
+        margin-top: 9px;
+        color: $white;
+        font: normal normal bold 20px/44px Arial;
+      }
+
+      .id-uiwi-label.right {
+        float: right;
+      }
+
+      .id-uiwi-label:hover {
+        background: $primary-traditionalist 0% 0% no-repeat padding-box;
+        cursor: pointer;
+      }
+
+      .id-uiwi-label:active {
+        //background: #0b567c 0% 0% no-repeat padding-box;
+        animation: blinker 1s linear infinite;
+      }
+
+
+      .id-uiwi-label.selected {
+        background: $primary-traditionalist 0% 0% no-repeat padding-box;
+      }
+
+    }
+
+
+  }
+}
+
+.ageResult .grill .question-overlay {
+  margin-bottom: 100px;
+}
+
+.interest.interestsQuestion, .interest.interestsResult {
+  .politik {
+    .answers-container {
+      margin-top: 80px;
+
+      .id-uiwi-label {
+        margin-top: 12px;
+      }
+    }
+
+
+  }
+
+}
+
+.interestsResult {
+  .progress-bar-label {
+    &.selected {
+      color: $white;
+    }
+  }
+
+  .politik {
+    .id-uiwi-label_ergebnis {
+      width: 80%;
+      margin: 30px 0 30px 0;
+      padding: 25px 20px 25px 20px;
+      line-height: 30px;
+      font-size: 20px;
+
+      .label_ergebnis-title {
+        font-weight: 600;
+        font-size: 22px;
+      }
+    }
+
+    .round .progress-bar {
+      height: 20px;
+
+      .progress-bar-filler {
+        background: $primary-politik;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .answer-results-container {
+      margin-left: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .interests-result-progress {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        width: 90%;
+
+        .result-label {
+          text-align: left;
+          margin-right: 20px;
+          width: 30%;
+        }
+
+        .round {
+          width: 80%;
+          margin-left: auto;
+
+          .progress-bar {
+            border-radius: 50px;
+            height: 25px;
+            width: 90%;
+
+            .progress-bar-label {
+              display: block;
+              font-size: 16px;
+              padding-left: 10px;
+              text-align: left;
+              min-width: 80px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

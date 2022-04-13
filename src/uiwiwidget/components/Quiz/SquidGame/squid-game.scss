@@ -1,0 +1,314 @@
+@import "src/uiwiwidget/styles/abstracts/variables";
+
+/**************************
+ * Common
+**************************/
+.squid-game,
+.squidGameStart button,
+.squidGameStart button a {
+      color: $white !important;
+}
+
+.start-soldier-container,
+.start-image-wrapper,
+.squid-game .question-container,
+.squid-game .question-grid,
+.squid-game .question-grid .id-uiwi-label,
+.button-wrapper {
+      display: flex;
+}
+
+.squid-game .question-grid .id-uiwi-label,
+.start-soldier-container {
+      align-items: center;
+}
+
+.button-wrapper {
+      justify-content: center;
+}
+
+.squid-game .question-grid .id-uiwi-label {
+      background: rgba(0, 0, 0, 0.35);
+}
+
+.squid-game .question-image-wrapper {
+      margin: 8px 20px 0;
+}
+
+.start-headline,
+.start-counter {
+      font: normal normal normal 25px/29px $font-default;
+}
+
+.squid-game {
+      font-family: $font-default;
+      background: $red-squid-game;
+
+      /**************************
+   * tz logo
+   **************************/
+      .logo,
+      .question-header-bar,
+      .progress {
+            background: $white;
+      }
+
+      .logo,
+      .id-uiwi-label {
+            box-shadow: 0px 3px 6px $box-shadow-alt;
+      }
+
+      .question-header-bar {
+            box-shadow: 0 0 6px $box-shadow-alt;
+      }
+
+      .logo {
+            //width: auto;
+            bottom: auto;
+            text-align: center;
+            width: 50px;
+            height: 55px;
+            //height: 60px;
+            //padding: 0 4px 4px 4px;
+            right: 15px;
+      }
+
+      /**************************
+   * Question stories
+   **************************/
+      .question-header-bar {
+            width: inherit;
+            color: $black;
+            //border-top: 0.5px solid $red-squid-game;
+            height: 40px;
+            padding: 12px;
+            //margin-bottom: 10px;
+
+            > h2 {
+                  font: normal normal bold 15px $font-default;
+            }
+      }
+
+      .question-container {
+            height: 100%;
+            margin-top: 10px;
+            //margin: 20px 25px 0 0;
+      }
+
+      .question-image {
+            height: 75%;
+      }
+
+      .question-right-container {
+            //margin-right: 30px;
+            //margin-right: 30px;
+      }
+
+      .question-right-container-answer {
+            display: flex;
+            align-items: center;
+            margin-top: -100px;
+      }
+
+      .question-subtext-header {
+            text-transform: uppercase;
+            font: normal normal normal 10px/25px $font-default;
+      }
+
+      .question-main-text {
+            font: normal normal normal 20px/25px $font-default;
+            //display: flex;
+            //align-items: center;
+      }
+
+      .question-grid {
+            flex-wrap: wrap;
+            width: 95%;
+            margin-top: 5px;
+
+            .id-uiwi-label {
+                  margin: 5px;
+                  padding: 0 5px;
+                  border-radius: 0;
+                  flex: 40%;
+                  min-height: 74px;
+                  line-height: normal;
+                  justify-content: center;
+
+                  &:hover {
+                        background: $black;
+                        filter: none;
+                        transition: 0.3s;
+                  }
+            }
+      }
+
+      .progress,
+      .progress_wrapper {
+            border-radius: 50%;
+      }
+
+      .progress_array {
+            bottom: 0;
+            //padding-left: 100px;
+            margin-bottom: 5px;
+      }
+
+      /*TODO: background white if element has progress child*/
+      .progress_wrapper {
+            width: 10px !important;
+            height: 10px;
+            border: 1px solid $white;
+      }
+}
+
+.squidGameQuestion {
+      border-width: 0 1px 1px 1px;
+      border-style: solid;
+      border-color: #efefef;
+      box-sizing: border-box;
+}
+
+/**************************
+ * Start stories
+ **************************/
+.squidGameStart {
+      background: transparent
+            linear-gradient(
+                  358deg,
+                  $red-squid-game 0%,
+                  $dark-red-squid-game 100%
+            )
+            0% 0% no-repeat padding-box;
+
+      .start-cookies {
+            .start-image-wrapper,
+            .start-counter,
+            .start-headline-wrapper {
+                  z-index: 1;
+                  position: relative;
+            }
+
+            .start-image-wrapper {
+                  margin: 60px auto 20px;
+
+                  .start-image {
+                        margin: 0 auto;
+                        height: 90px;
+                        width: 415px;
+                  }
+            }
+
+            //.start-image-wrapper-cookies {
+            //  height: 100px;
+            //
+            //}
+
+            .start-counter {
+                  padding-bottom: 20px;
+            }
+
+            .button-wrapper {
+                  //background: rgba( $red-squid-game, 0.5);
+                  position: absolute;
+                  bottom: 40px;
+                  width: 50%;
+                  height: 45%;
+                  z-index: 0;
+                  left: 0;
+                  right: 0;
+                  margin-left: auto;
+                  margin-right: auto;
+
+                  button {
+                        bottom: 0;
+                        position: absolute;
+                  }
+            }
+      }
+
+      .start-doll {
+            .start-image {
+                  height: auto;
+                  width: 100%;
+                  object-fit: cover;
+            }
+
+            .start-image-wrapper {
+                  height: 70%;
+            }
+
+            .start-bottom-wrapper {
+                  display: flex;
+                  align-items: center;
+                  height: 30%;
+
+                  button {
+                        padding: 5px 10px 5px 10px;
+                  }
+
+                  .start-headline {
+                        width: 60%;
+                  }
+            }
+      }
+
+      .start-soldier {
+            background: left 10px / contain no-repeat
+                        url("./images/Present.png"),
+                  $red-squid-game;
+
+            .start-soldier-container {
+                  width: inherit;
+                  height: inherit;
+            }
+
+            .start-headline-wrapper {
+                  margin-right: 30px;
+                  width: 50%;
+                  position: absolute;
+                  right: 0;
+
+                  .start-headline {
+                        margin-bottom: 20px;
+                  }
+            }
+      }
+
+      button {
+            background: transparent;
+            border: 2px solid $white;
+            border-radius: 17px;
+            padding: 5px 13px 5px 13px;
+            font: normal normal normal 15px/17px Arial;
+
+            &:hover {
+                  background: #ffffff4d 0% 0% no-repeat padding-box;
+                  filter: normal;
+            }
+      }
+}
+
+/**************************
+ * Question stories only
+ **************************/
+.squidGameQuestion,
+.squidGameResult {
+      .story {
+            flex-direction: column;
+            align-items: normal;
+      }
+
+      .answer-text,
+      .answer-subtext {
+            font: normal normal 15px/20px $font-default;
+      }
+
+      .answer-text {
+            font-weight: bold;
+      }
+
+      .answer-subtext {
+            margin: 0;
+      }
+}

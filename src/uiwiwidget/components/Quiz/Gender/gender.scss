@@ -1,0 +1,156 @@
+@import "src/uiwiwidget/styles/abstracts/variables";
+
+//common styles
+.gender-confirm-text-container,
+.gender-confirm-question,
+.gender-result-paragraph {
+  letter-spacing: 0.54px;
+}
+
+.gender,
+.gender #container {
+  background: center center/255% url("./images/pergament.jpg");
+}
+
+#countdown {
+  position: absolute;
+  top: 10px;
+  color: white;
+  right: 10px;
+  text-align: center;
+  line-height: 35px;
+  width: 35px;
+  height: 35px;
+  border-radius: 35px;
+}
+
+.gender {
+  .id-uiwi-h3 {
+    font: normal normal bold 30px/35px $font-default;
+    letter-spacing: 0.9px;
+  }
+
+  .start-title {
+    font-size: 30px;
+    padding: 10px 0;
+    color: #4a4a4a;
+  }
+
+  .question-overlay {
+    margin-bottom: 20px;
+  }
+}
+
+.gender .id-uiwi-label {
+  box-shadow: 0 3px 6px $black-box-shadow;
+  border-radius: 5px;
+  border: 0;
+}
+
+.gender .question {
+  display: flex;
+  background-color: transparent;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  min-height: 215px;
+  vertical-align: bottom;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+.gender-quiz-question-mark {
+  color: #4a4a4a;
+  font: normal normal bold 180px/150px $font-default;
+  letter-spacing: 7.2px;
+  vertical-align: center;
+  position: absolute;
+  top: 240px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.gender-start-picture {
+  height: 400px;
+}
+
+.small .gender-start-picture {
+  height: 200px;
+}
+
+.small .gender-quiz-question-mark {
+  top: 100px;
+}
+
+.gender-picture {
+  height: 532px;
+  background: no-repeat center/250% url("./images/garden-of-earthly-delights.jpg");
+}
+
+.gender-confirm-text-container {
+  width: 300px;
+  height: 322px;
+  text-align: center;
+  margin: 0 auto;
+  font: normal normal normal 18px/30px $font-default;
+  color: #4a4a4a;
+}
+
+.gender-confirm-intro-text {
+  margin: 50px auto;
+}
+
+.gender-confirm-question {
+  text-align: center;
+  font: normal normal bold 18px/30px $font-default;
+}
+
+.gender-confirm-btn {
+  box-shadow: 0 3px 6px $black-box-shadow;
+  border-radius: 5px;
+  border: 0;
+  width: 70px;
+  height: 50px;
+  font: normal normal bold 20px/23px $font-default;
+  letter-spacing: 1.3px;
+  color: $white;
+}
+
+.m {
+  background: #0c135e 0 0 no-repeat padding-box;
+}
+
+.w {
+  background: #ff0f7b 0 0 no-repeat padding-box;
+  margin-left: 20px;
+}
+
+.gender-result-title {
+  margin-top: 70px;
+}
+
+.gender-result-paragraph {
+  margin-top: 20px;
+  text-align: center;
+  font: normal normal normal 18px/30px $font-default;
+  color: #4a4a4a;
+}
+
+.gender-result-image {
+  position: absolute;
+  height: 150px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.gender-result-title-container {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.id-uiwi-label-no-result {
+  font: normal normal bold 20px/23px $font-default;
+  letter-spacing: 1.3px;
+  color: $white;
+}

@@ -1,0 +1,127 @@
+.income {
+      .income-background {
+            background-image: url("./images/bg.jpeg");
+            background-size: cover;
+            height: inherit;
+            z-index: -1;
+            position: absolute;
+            opacity: 0.6;
+      }
+
+      #container {
+            .story {
+                  flex-direction: column;
+            }
+      }
+
+      .title-text {
+            font-size: 14px;
+            margin: 15px 17px 15px 17px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid $black;
+      }
+
+      .title-subtext {
+            font-weight: normal;
+      }
+
+      .answers-wrapper {
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin: 20px 20px 15px 20px;
+            row-gap: 0.35em;
+
+            .id-uiwi-label {
+                  width: 250px;
+                  flex: 40%;
+                  min-height: 32px;
+                  justify-content: center;
+                  align-items: center;
+                  box-shadow: none;
+                  background-color: rgba(255, 255, 255, 0.5);
+                  margin: 0 5px 0 0;
+
+                  &:hover {
+                        color: $white;
+                        transition: 0.3s;
+                  }
+            }
+      }
+
+      .evaluation-wrapper {
+            .title {
+                  margin-bottom: 14px;
+            }
+            .interval {
+                  border-radius: 20px;
+                  color: $white;
+                  text-align: center;
+                  padding: 5px 0 5px 0;
+            }
+      }
+
+      .salary-bar-wrapper {
+            margin: 15px 0 15px 0;
+            width: 90%;
+            position: relative;
+
+            .salary-bar {
+                  justify-content: space-between;
+                  min-height: 38px;
+                  background: transparent
+                        linear-gradient(
+                              90deg,
+                              #ffffff00 0%,
+                              #ffffffbf 33%,
+                              #ffffffbf 72%,
+                              #ffffff00 100%
+                        )
+                        0% 0% no-repeat padding-box;
+
+                  .line {
+                        border-left: 3px solid $black;
+                        height: 60px;
+                        position: absolute;
+                        margin-top: -4px;
+                  }
+            }
+      }
+
+      /*
+     * Shared CSS rules
+     */
+      .title-wrapper,
+      .evaluation {
+            margin-bottom: 20px;
+      }
+
+      .title-wrapper,
+      .income-background {
+            width: inherit;
+      }
+
+      .start-question,
+      .evaluation > .title {
+            font-size: 20px;
+      }
+
+      .answers-wrapper,
+      .answers-wrapper .id-uiwi-label,
+      .salary-bar-wrapper .salary-bar {
+            display: flex;
+      }
+
+      .answers-wrapper .id-uiwi-label:hover,
+      .evaluation-wrapper .interval {
+            background: rgba(0, 0, 0, 0.3);
+      }
+
+      .answers-wrapper .id-uiwi-label,
+      .info {
+            font: normal normal normal 15px/17px Arial;
+      }
+
+      .info {
+            font-style: italic;
+      }
+}

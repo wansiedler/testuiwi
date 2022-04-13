@@ -1,0 +1,357 @@
+/* @import "./abstracts/variables"; */
+//@import "./limbicTypes/Harmoniser";
+//@import "./limbicTypes/Traditionalist";
+
+@import "./themes/politik";
+@import "./themes/grill";
+
+@import "./components/button";
+@import "./components/counter";
+@import "./components/icon";
+@import "./components/label";
+@import "./components/question";
+@import "./components/tab";
+@import "./components/progressArray";
+
+@import "src/uiwiwidget/components/Quiz/Age/age";
+@import "src/uiwiwidget/components/Quiz/Gender/gender";
+@import "src/uiwiwidget/components/Quiz/Interests/interests";
+@import "src/uiwiwidget/components/Quiz/SquidGame/squid-game";
+@import "src/uiwiwidget/components/Quiz/Income/income";
+@import "src/uiwiwidget/components/Newsletter/newsletterSeparate";
+
+$font-default-serif: arial, serif;
+[contenteditable] {
+  outline: none !important;
+}
+
+
+#UIWIWidget {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 300;
+  font-family: $font-default-serif;
+  margin: 0 auto;
+
+  * {
+    outline: none !important;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                     supported by Chrome, Edge, Opera and Firefox */
+
+  }
+}
+
+#renderThumb:focus-visible {
+  outline: none !important;
+}
+
+.quiz {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.stories {
+  margin: 0 auto;
+  position: relative;
+}
+
+.story {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+//.id-uiwi-a,
+//.id-uiwi-label,
+//.id-uiwi-button,
+//.transparent {
+//  cursor: pointer;
+//}
+
+a,
+label,
+button,
+.transparent {
+  cursor: pointer;
+}
+
+.id-uiwi-h3,
+.id-uiwi-h2 {
+  padding: 0;
+  margin: 0 auto;
+}
+
+.id-uiwi-span {
+  line-height: 1em;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10rem;
+  justify-content: flex-start;
+  max-width: 400px;
+}
+
+.interactive {
+  /* transition: opacity 0.3s, visibility 0.3s; */
+  opacity: 0.8;
+  animation: blinker 2s linear infinite;
+}
+
+
+.subtext {
+  margin: 40px auto 0;
+}
+
+.medium .subtext {
+  margin-top: 10px;
+}
+
+
+#selected,
+.selected {
+  /* filter: drop-shadow(0 5px 5px #aaa) !important; */
+  opacity: 1 !important;
+}
+
+.traditionalist {
+  background-color: $white;
+}
+
+
+#countdown {
+  background: $primary-traditionalist $no-repeat-0-pd-box;
+}
+
+h3,
+h2 {
+  max-width: 300px;
+  display: block;
+  margin: 0 auto;
+  font: $font-age-quiz-title;
+
+  //color: #484848;
+}
+
+.correct {
+  background: $primaryGreenTraditionalistHover $no-repeat-0-pd-box !important;
+  opacity: 1;
+}
+
+.not_correct {
+  background-color: $red !important;
+  opacity: 0.3;
+}
+
+.progress_array {
+  width: 95%;
+  margin-top: 15px;
+  filter: "drop-shadow(0 1px 8px #222)";
+}
+
+.progress_wrapper {
+  height: 10px;
+  opacity: 0.5;
+  background: $white;
+  margin: 0 10px 0 0;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.progress {
+  background: $primaryGreenTraditionalist;
+}
+
+.compact .tab {
+  margin-top: 0;
+}
+
+.id-uiwi-label:hover,
+.icon:hover,
+.id-uiwi-input:hover {
+  filter: drop-shadow(0 5px 5px $white);
+}
+
+.id-uiwi-label,
+.id-uiwi-label_inline,
+.id-uiwi-label_ergebnis {
+  background: $primaryGreenTraditionalist;
+  color: $white;
+}
+
+.id-uiwi-label {
+  background: $primaryGreenTraditionalist;
+
+  &:hover {
+    background: $primaryGreenTraditionalistHover $no-repeat-0-pd-box;
+  }
+}
+
+.question {
+  background-color: $question-overlay-traditionalist;
+  color: $black;
+}
+
+.start_button,
+.start_button_age {
+  > a {
+    color: $white;
+  }
+}
+
+.start_button {
+  background: #00a110 $no-repeat-0-pd-box;
+  box-shadow: 0 3px 6px $black-box-shadow;
+}
+
+.start_button_age {
+  background: $primaryGreenTraditionalist $no-repeat-0-pd-box;
+}
+
+.circleQuestion {
+  background-color: rgb(217 210 191 / 78%);
+  color: $black;
+}
+
+.icon {
+  color: $white;
+}
+
+.interactive {
+  background: $primaryGreenTraditionalist;
+  filter: drop-shadow(0 5px 5px #aaa);
+}
+
+.question-overlay {
+  background: $question-overlay-traditionalist;
+}
+
+.subtitle {
+  color: #2c2c2c;
+}
+
+.start_button:hover,
+.start_button_age:hover {
+  background: $primaryGreenTraditionalistHover;
+}
+
+.age-start-slider-overlay {
+  background: $question-overlay-traditionalist $no-repeat-0-pd-box;
+}
+
+.slider-bar-wrapper {
+  background: $black;
+}
+
+.age-vote-slider-dot {
+  background: $primaryGreenTraditionalistHover;
+}
+
+.slider-thumb {
+  background: $primaryGreenTraditionalist;
+}
+
+//.selected,
+//.id-uiwi-label_inline:hover,
+.correct {
+  background: $primaryGreenTraditionalistHover $no-repeat-0-pd-box;
+}
+
+#countdown {
+  /* TODO: change for each limbic Type */
+  background: $primary-traditionalist $no-repeat-0-pd-box;
+}
+
+.slider-bar-wrapper,
+.progress_wrapper {
+  background: $darkBlueTraditionalist;
+}
+
+.age-vote-slider-dot {
+  background: $primaryGreenTraditionalistHover;
+}
+
+.slider-thumb {
+  background: $primaryGreenTraditionalist;
+
+  &:hover {
+    background: $primaryGreenTraditionalistHover;
+  }
+}
+
+.age-group-progress-bar-wrapper,
+.age-result-progress-bar-wrapper {
+  .progress-bar {
+    width: 80%;
+    background: $darkBlueTraditionalist;
+  }
+
+  .progress-bar-filler {
+    background: $primaryGreenTraditionalistHover;
+  }
+}
+
+.age-result-progress-bar-wrapper {
+  .progress-bar {
+    background: $lightBlueTraditionalist;
+  }
+
+  .progress-bar-filler {
+    background: $darkBlueTraditionalist;
+  }
+}
+
+.age-result-progress-selected {
+  .progress-bar-filler {
+    background: $primaryGreenTraditionalistHover;
+  }
+}
+
+.interests-result-progress {
+  .round {
+    .progress-bar {
+      width: 80%;
+      background: $darkBlueTraditionalist;
+    }
+
+    .progress-bar-filler {
+      background: $primaryGreenTraditionalistHover;
+    }
+  }
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+
+.id-uiwi-button:hover {
+  filter: drop-shadow(0 5px 5px #aaa);
+}
+
+h2 {
+  font: normal normal bold 30px/35px $font-default;
+  letter-spacing: 0.9px;
+
+  //color: #4a4a4a;
+}
+
+.traditionalist-overlay {
+  background: $question-overlay-traditionalist $no-repeat-0-pd-box;
+}

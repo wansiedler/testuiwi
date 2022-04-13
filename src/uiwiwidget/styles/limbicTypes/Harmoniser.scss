@@ -1,0 +1,201 @@
+@import "src/uiwiwidget/styles/abstracts/variables";
+
+.harmoniser {
+  background-color: $backgroundWhite;
+  border: 1px solid #ccc;
+  opacity: 1;
+
+  .correct {
+    background-color: $red !important;
+    opacity: 0.3;
+  }
+
+  .progress_wrapper:last-child {
+    margin: 0;
+  }
+
+  .progress_array {
+    width: 95%;
+    /*width: 100%;*/
+    /*background: #000;*/
+    margin-top: 15px;
+    filter: "drop-shadow(0 1px 8px #222)";
+  }
+
+  .progress_wrapper {
+    background: #f2f2f0;
+  }
+
+  .progress {
+    background: #a59887;
+  }
+
+  #countdown,
+  .counter,
+  .id-uiwi-label,
+  .id-uiwi-label-inline,
+  .id-uiwi-label_ergebnis,
+  .question_block > h2,
+  .start_button,
+  .start_button_age,
+  .circleQuestion {
+    color: $black;
+  }
+
+  #countdown,
+  .id-uiwi-label,
+  .id-uiwi-label_inline,
+  .id-uiwi-label_ergebnis,
+  .interactive,
+  .slider-thumb,
+  .progress-bar-filler {
+    background: $primaryColorHarmoniser;
+  }
+
+  .selected,
+  .start_button:hover,
+  .start_button_age:hover,
+  .id-uiwi-label:hover,
+  .id-uiwi-label_inline:hover {
+    background: $darkOrangeHarmoniser 0 0 no-repeat padding-box;
+  }
+
+  .question-overlay,
+  .question-wrapper,
+  .question,
+  .circleQuestion,
+  .age-vote-slider-dot {
+    background: $primaryBrownHarmoniser;
+  }
+
+  .harmoniser-overlay {
+    background: $primaryBrownHarmoniser 0 0 no-repeat padding-box;
+  }
+
+  .start_button,
+  .start_button_age,
+  .counter {
+    background: $primaryColorHarmoniser 0 0 no-repeat padding-box;
+  }
+
+  .slider-bar-wrapper,
+  .interests-result-progress,
+  .round,
+  .age-group-progress-bar-wrapper,
+  .age-result-progress-bar-wrapper {
+    .progress-bar {
+      background: $lightBrownHarmoniser;
+    }
+  }
+
+  .subtitle {
+    color: #e7e7e7;
+  }
+
+  .icon,
+  .question,
+  .question-header > h3,
+  .age-quiz-start-headline-container > h2,
+  .harmoniser h3,
+  .harmoniser h2,
+  .gender h3,
+  .harmoniser h2 {
+    color: $white;
+  }
+
+  .age-start-slider-overlay {
+    background: $primaryBrownHarmoniser 0% 0% no-repeat padding-box;
+  }
+
+  /* GENDER */
+  .gender-result-title > h3 {
+    color: #484848;
+  }
+
+  .compact {
+    .tab {
+      margin-top: 0;
+    }
+  }
+
+  .slider-bar-wrapper {
+    background: $lightBrownHarmoniser;
+  }
+
+  .slider-thumb {
+    &:hover {
+      background: $darkOrangeHarmoniser;
+    }
+  }
+
+  .age-group-progress-bar-wrapper,
+  .age-result-progress-bar-wrapper {
+    .progress-bar {
+      width: 80%;
+    }
+
+    .progress-bar-filler {
+      background: $primaryBrownHarmoniser;
+    }
+  }
+
+  .age-result-progress-selected {
+    .progress-bar-filler {
+      background: $primaryColorHarmoniser;
+    }
+  }
+
+  .interests-result-progress {
+    .round {
+      .progress-bar {
+        width: 80%;
+      }
+
+      .progress-bar-filler {
+        background: $primaryBrownHarmoniser;
+      }
+    }
+  }
+
+
+  .icon__left:before,
+  .icon__left::before,
+  .icon__right:before,
+  .icon__right::before {
+    font-size: 30px;
+  }
+
+  .icon__left:before,
+  .icon__left::before {
+    content: "⟨";
+  }
+
+}
+
+/*TODO: Hover is identical to traditionalist
+
+.harmoniser .id-uiwi-label:hover,
+.id-uiwi-label:hover,
+.icon:hover,
+.harmoniser button:hover,
+.id-uiwi-input:hover {
+      filter: drop-shadow(0 5px 5px $white);
+}*/
+
+.harmoniser h3,
+.harmoniser h2 {
+  max-width: 300px;
+  display: block;
+  margin: 0 auto;
+  font: normal normal bold 22px/33px $font-default;
+}
+
+.gender h3,
+.harmoniser h2 {
+  font: normal normal bold 30px/35px $font-default;
+  letter-spacing: 0.9px;
+}
+
+.harmoniser .circleQuestion .id-uiwi-label {
+  border: 0;
+}

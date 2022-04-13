@@ -1,0 +1,459 @@
+$red: #CD151B;
+$ruhr24-orange: #ed7308;
+$white: #fff;
+$black: #000;
+
+.newsletterSeparate {
+  font-family: "Arial", serif;
+  position: relative;
+
+  a {
+    text-decoration: underline;
+  }
+
+  .newsletter-container {
+    border: 1px solid #dedede;
+    border-radius: 3px;
+    position: relative;
+    background-size: cover;
+    width: 100%;
+
+    .text-container {
+      //margin: 25px;
+
+      .email-form {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        position: relative;
+
+        .error {
+          position: absolute;
+          top: -20px;
+          //right: 10px;
+        }
+
+        #email-input {
+          margin: 0;
+          border: 1px solid #d0d0d0;
+          padding: 0 0 0 15px;
+          box-sizing: border-box;
+          font: normal normal normal 16px/35px Arial;
+        }
+
+        .newsletter-button {
+          border: 0;
+          border-radius: 0 2px 2px 0;
+          color: $white;
+          font: normal normal normal 16px/21px Arial;
+        }
+      }
+
+    }
+
+    .title {
+      font: normal normal bold 22px/25px Arial;
+      margin-bottom: 8px;
+    }
+
+    .description {
+      font: normal normal normal 14px/20px Arial;
+    }
+
+
+    .tip {
+      //height: 11px;
+      font: normal normal normal 9px Arial;
+      margin: 5px 0;
+    }
+
+    .image-copyright {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      font-size: 9px;
+      margin: 0 7px 5px 0;
+    }
+  }
+
+  .newsletter-danke {
+    flex-direction: row !important;
+    display: flex;
+    margin: 60px 50px 50px 66px;
+
+    .newsletter-icon-wrapper {
+      //width: 100%;
+      min-width: 50px;
+      //min-height: 156px;
+      //display: flex;
+      object-fit: contain;
+      background: url("./images/completed/email_icon_black.png") no-repeat center center;
+      background-size: 50px;
+      //padding: 0 40px 0 0;
+    }
+
+    .text {
+      margin-left: 30px;
+      padding-right: 100px;
+
+      .title {
+        margin-right: 100px;
+      }
+    }
+  }
+
+  .frankfurter .variant-1 .newsletter-container,
+  .hna .variant-1 .newsletter-container {
+    background-color: $white;
+    color: $black;
+  }
+
+  .frankfurter .email-form .newsletter-button,
+  .hna .email-form .newsletter-button {
+    background-color: $red;
+  }
+
+  .frankfurter .variant-1 .title,
+  .hna .variant-1 .title {
+    color: $red;
+  }
+
+  .frankfurter .newsletter-danke .newsletter-icon,
+  .hna .newsletter-danke .newsletter-icon {
+    width: 50px;
+  }
+
+  .ruhr24 .variant-1 .tip > a {
+    color: $black;
+  }
+
+  .frankfurter .variant-2 .newsletter-container,
+  .frankfurter .variant-3 .newsletter-container,
+  .frankfurter .variant-2, .frankfurter .variant-2 .tip > a,
+  .frankfurter .variant-3, .frankfurter .variant-3 .tip > a,
+  .hna .variant-2 .newsletter-container,
+  .hna .variant-3 .newsletter-container,
+  .hna .variant-2, .hna .variant-2 .tip > a,
+  .hna .variant-3, .hna .variant-3 .tip > a,
+  .ruhr24 .variant-2 .tip > a,
+  .ruhr24 .variant-3 .tip > a {
+    color: $white;
+  }
+
+  .frankfurter {
+    #logo {
+      width: 169px;
+      height: 44px;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      content: url("./images/fnp/logo_fnp_black.png");
+    }
+
+    .variant-2 .error, .variant-3 .error {
+      color: $white;
+    }
+
+    .variant-2 #logo,
+    .variant-3 #logo {
+      content: url("./images/fnp/logo_fnp_white.png");
+    }
+
+    .variant-2 {
+      .newsletter-container {
+        background-image: url("./images/fnp/variant_2.png");
+      }
+
+      .newsletter-icon-wrapper {
+        background: url("./images/completed/email_icon_white.png") no-repeat center center;
+        background-size: 50px;
+      }
+    }
+
+    .variant-3 {
+      .newsletter-container {
+        background-image: url("./images/fnp/variant_3.png");
+      }
+
+      .newsletter-icon-wrapper {
+        background: url("./images/completed/email_icon_white.png") no-repeat center center;
+        background-size: 50px;
+      }
+    }
+  }
+
+  .hna {
+    #logo {
+      content: url("./images/hna/logo_hna.png");
+    }
+
+    .variant-2 .error, .variant-3 .error {
+      color: $white;
+    }
+
+    .variant-2 {
+      .newsletter-container {
+        background-image: url("./images/hna/variant_2.png");
+      }
+
+      .newsletter-icon-wrapper {
+        background: url("./images/completed/email_icon_white.png") no-repeat center center;
+        background-size: 50px;
+      }
+    }
+
+    .variant-3 {
+      .newsletter-container {
+        background-image: url("./images/hna/variant_3.png");
+      }
+
+      .newsletter-icon-wrapper {
+        background: url("./images/completed/email_icon_white.png") no-repeat center center;
+        background-size: 50px;
+      }
+    }
+  }
+
+  .ruhr24 {
+    #logo {
+      content: url("./images/ruhr24/logo_ruhr24.png");
+    }
+
+    .variant-2 .error, .variant-3 .error {
+      color: $white;
+    }
+
+    .email-form {
+      .newsletter-button {
+        background-color: $ruhr24-orange;
+      }
+    }
+
+    .variant-1 {
+      .newsletter-container {
+        background-color: $white;
+        color: $black;
+      }
+
+      .title {
+        color: $ruhr24-orange;
+      }
+
+
+    }
+
+    .variant-2 {
+      .newsletter-container {
+        color: $white;
+        background-image: url("./images/ruhr24/variant_1.png");
+        background-size: cover;
+      }
+
+      .newsletter-icon-wrapper {
+        background: url("./images/completed/email_icon_white.png") no-repeat center center;
+        background-size: 50px;
+      }
+
+    }
+
+    .variant-3 {
+      .newsletter-container {
+        color: $white;
+        background-image: url("./images/ruhr24/variant_2.png");
+        background-size: cover;
+      }
+
+      .newsletter-icon-wrapper {
+        background: url("./images/completed/email_icon_white.png") no-repeat center center;
+        background-size: 50px;
+      }
+
+    }
+  }
+
+  .message {
+    margin: 10px 0 0 0;
+  }
+
+
+  .error {
+    color: #a81c39;
+    //margin-bottom: 2px;
+    //line-height: 15px;
+    width: 100%;
+    text-align: right;
+  }
+
+  .fullWidth {
+    margin-top: 20px;
+    //position: absolute;
+    //bottom: 5px;
+    //width: 95%
+  }
+
+  @media only screen and (min-width: 1001px) {
+    .newsletter-container {
+      max-width: 692px;
+      min-height: 215px;
+    }
+
+    .title {
+      margin-right: 180px;
+    }
+
+
+    #logo {
+      width: 115px;
+      height: 50px;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+
+    .email-form {
+      margin-top: 20px;
+      //position: absolute;
+      //left: 25px;
+      //border: 45px;
+      //bottom: 15px;
+      //width: 95%
+    }
+
+    .text-container {
+      padding: 30px 15px 15px 15px !important;
+      margin: 0 auto;;
+    }
+
+    #email-input {
+      //width: 349px;
+      width: 60%;
+    }
+
+    .newsletter-button {
+      //width: 249px;
+      width: 40%;
+      height: 42px;
+    }
+
+    .description {
+      width: 437px;
+    }
+
+    .tip {
+      //width: 405px;
+      //height: 11px;
+    }
+
+    .error {
+      bottom: 100%;
+    }
+  }
+  @media only screen and (max-width: 1000px) {
+
+    .newsletter-container {
+      max-width: 456px;
+      //height: 347px !important;
+      min-height: 347px !important;
+    }
+    .error {
+      text-align: center;
+    }
+    #logo {
+      width: 95px;
+      height: 41px;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+    //.newsletter-icon-wrapper {
+    //  //height: 270px;
+    //  //margin: 20px 50px 50px 50px;
+    //}
+
+    .newsletter-danke {
+      padding-top: 60px;
+      .text {
+        margin-left: 30px;
+        padding-right: 0;
+
+        .title {
+          margin-right: 0;
+        }
+      }
+      //margin: 60px 50px 0 50px;
+      //padding: 0 50px 0  50px;
+      //padding: 0;
+      //margin: 120px 55px 0 15px;
+    }
+
+    .text-container {
+      //margin: 100px 25px 0 25px !important;
+      padding: 65px 10px 0 10px !important;
+      //width: 90% !important;
+      //margin: 0 auto !important;
+    }
+
+    .description {
+      font-size: 16px !important;
+      line-height: 25px !important;
+    }
+
+    .newsletter-container {
+      background-position-x: right !important;
+      //padding: 25px !important;
+    }
+
+    .tip {
+      //line-height: 1em;
+    }
+
+    #email-input {
+      //width: 396px;
+      //width: 400px;
+      width: 100%;
+      height: 40px;
+      line-height: 40px;
+      //padding-left: 5px !important;
+
+    }
+
+    .newsletter-button {
+      width: 100%;
+      padding: 0 !important;
+      //width: 406px !important;
+      height: 42px !important;
+      margin: 12px 0 0 0;
+      line-height: 40px;
+    }
+    input[type="text" i] {
+      padding: 0
+    }
+    .email-form {
+      flex-direction: column !important;
+      margin: 40px auto 0 auto;
+      display: block !important;
+    }
+
+    .email-form {
+      //margin: 10px auto 0 auto !important;
+    }
+
+    .ruhr24 .variant-2 .email-form,
+    .ruhr24 .variant-3 .email-form {
+      margin: 10px auto 0 auto !important;
+    }
+
+    .ruhr24 .tip {
+      margin: 10px 0;
+      width: 80%;
+      line-height: 12px;
+    }
+
+    .ruhr24 .image-copyright {
+      margin: 0 7px 10px 0;
+    }
+  }
+
+
+}

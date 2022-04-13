@@ -1,0 +1,15 @@
+@import "src/uiwiwidget/styles/abstracts/variables";
+
+.counter {
+      position: absolute;
+      top: 0;
+      right: -50px;
+      line-height: 35px;
+      width: 35px;
+      height: 35px;
+      border-radius: 35px;
+      color: $white;
+      background: $primary-traditionalist 0 0 no-repeat padding-box;
+      text-align: center;
+      vertical-align: middle;
+}

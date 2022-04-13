@@ -1,0 +1,29 @@
+.progress {
+      transform-origin: center left;
+      perspective: 1000px;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      -ms-backface-visibility: hidden;
+      backface-visibility: hidden;
+      -webkit-perspective: 1000px;
+      -moz-perspective: 1000;
+      -ms-perspective: 1000;
+}
+
+.progress_wrapper {
+      height: 10px;
+      margin: 0 10px 0 0;
+      transition: opacity 400ms ease-in-out;
+      max-width: 100%;
+}
+
+.progress_array {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      align-self: center;
+      z-index: 99;
+      opacity: 1;
+}

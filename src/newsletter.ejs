@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Widget UIWI</title>
+    <style>
+        .widget-host {
+            float: left;
+            margin: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="widget-host" id="uiwiwidget:newsletter"
+     data-cxo-conf='{
+                        experimentID: "newsletter-test-ruhr24-1",
+                        classProp: "ruhr24",
+                        text: "Dein täglicher RUHR24-Newsletter",
+                        client: "webnachrichten-de",
+                        clientID: "252",
+                        recipientList: ["daily"]
+        }'></div>
+<div class="widget-host" id="uiwiwidget:newsletter"
+     data-cxo-conf='{
+                        experimentID: [
+                              "cxo-newsletter-fnp-frankfurt-nn-b-v1_0",
+                              "cxo-newsletter-fnp-frankfurt-ts-v1_0",
+                        ],
+                        classProp: "frankfurter",
+                        text: "Der samstägliche Frankfurt-Newsletter",
+                        subtext: "Unsere Redaktion fasst alle spannenden Entwicklungen aus der Bankenmetropole für Sie zusammen. Mit uns bleiben Sie up to date.",
+                        client: "webnachrichten-de",
+                        clientID: 252,
+                        recipientList: ["daily"]
+}'></div>
+<div class="widget-host" id="uiwiwidget:newsletter"
+     data-cxo-conf='{
+                        experimentID: [
+                              "cxo-newsletter-hna-verbraucher-nn-b-v1_0",
+                              "cxo-newsletter-hna-verbraucher-ts-v1_0"
+                        ],
+                        classProp: "hna",
+                        text: "Ihr wöchentlicher Verbraucher-Newsletter",
+                        subtext: "Der Newsletter mit neuen Produktinformationen und Meldungen über Rückrufe in Ihrer Region. Immer sonntags bequem in Ihr Postfach.",
+                        client: "webnachrichten-de",
+                        clientID: 252,
+                        recipientList: ["daily"]
+}'></div>
+
+<script src="/newsletter.js"></script>
+</body>
+
+</html>

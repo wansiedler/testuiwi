@@ -1,0 +1,45 @@
+@import "src/uiwiwidget/styles/abstracts/_variables";
+
+.politik {
+  .progress_array, .progress_wrapper { /*TODO: progress_wrapper shouldnt need color and opacity */
+    background: $white;
+    opacity: 1;
+    width: 100%;
+  }
+
+  .progress, .id-uiwi-label, .id-uiwi-label_ergebnis, .id-uiwi-label_inline {
+    background: $primary-politik;
+  }
+
+  .progress-bar {
+    background: $progress-bar !important;
+
+    .progress-bar-filler {
+      height: inherit;
+    }
+  }
+
+  .id-uiwi-label, .id-uiwi-label_inline, .progress-bar, .progress-bar-filler {
+    box-shadow: 0 3px 6px $box-shadow;
+  }
+
+  .id-uiwi-label:hover, .id-uiwi-label.selected, .id-uiwi-label_inline:hover {
+    background: $primary-politik-hover;
+  }
+
+  .question, .question-overlay {
+    clip-path: ellipse(60% 100% at 50% 0%);
+  }
+
+  .question-overlay {
+    background: rgba(87, 86, 86, 0.8);
+    position: relative;
+
+    .question-header {
+      .id-uiwi-h3, .id-uiwi-span {
+        color: $white;
+        margin-top: 15px;
+      }
+    }
+  }
+}

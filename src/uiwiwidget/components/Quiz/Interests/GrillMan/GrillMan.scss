@@ -1,0 +1,33 @@
+
+.box, .man {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.box:before, .man:before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: #E01202;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 40%;
+  animation: fill 2s ease-in-out alternate;
+  z-index: 1;
+}
+
+@keyframes fill {
+  from {
+    top: 250px;
+    transform: translateX(-50%) rotate(0deg);
+  }
+  to {
+    top: 0;
+    transform: translateX(-50%) rotate(360deg);
+  }
+}

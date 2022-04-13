@@ -1,0 +1,78 @@
+@import "src/uiwiwidget/styles/abstracts/variables";
+
+.question {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+      min-height: 215px;
+      vertical-align: bottom;
+      text-align: center;
+      font-size: 1.1em;
+      clip-path: ellipse(70% 100% at 50% 0%);
+      opacity: 0.2;
+}
+
+.question-header {
+      position: absolute;
+      top: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 300px;
+}
+
+.question_block {
+      justify-content: center;
+      text-align: center;
+      margin: 0 auto;
+      padding-top: 35px;
+      min-height: 80px;
+      vertical-align: bottom;
+      font-size: 1.1em;
+}
+
+.question-overlay {
+      clip-path: ellipse(70% 100% at 50% 0%);
+      position: relative;
+}
+
+.subtitle {
+      font-size: 22px;
+
+      /*padding: 0;
+      position: absolute;
+      top: 170px;
+      left: 50%;
+      transform: translate(-50%, -50%);*/
+      /* TODO: refactor so border is only set for the outer border
+      background: transparent;
+      border: 0;*/
+}
+
+.circleQuestion {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      width: 440px;
+      height: 420px;
+      text-align: center;
+      vertical-align: center;
+      font-weight: normal;
+      clip-path: ellipse(50% 50% at 50% 50%);
+      position: absolute;
+      top: 50%;
+      transform: translateX(-20px) translateY(-50%);
+
+      .id-uiwi-label {
+            border: 0;
+      }
+
+      > div {
+            width: 290px;
+      }
+
+      > h2 {
+            margin-bottom: 20px;
+      }
+}

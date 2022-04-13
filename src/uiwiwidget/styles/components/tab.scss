@@ -1,0 +1,42 @@
+@import "src/uiwiwidget/styles/abstracts/variables";
+
+.left_tab {
+      display: block;
+      padding: 5px 10px;
+      margin-top: 5px;
+      width: 86px;
+      text-decoration: none;
+      text-align: center;
+      /* Default colors */
+      color: $black;
+      /* Only round the top corners */
+      -webkit-border-top-left-radius: 0;
+      -webkit-border-top-right-radius: 15px;
+      -moz-border-radius-topleft: 0;
+      -moz-border-radius-topright: 15px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 15px;
+}
+
+.medium .left_tab {
+      padding: 2px;
+}
+
+.tab {
+      display: block;
+      padding: 8px 10px;
+      margin: 10px auto 0 auto;
+      width: 86px;
+      text-decoration: none;
+      text-align: center;
+      /* Default colors */
+      color: $black;
+      background: $question-overlay-traditionalist;
+      /* Only round the top corners */
+      -webkit-border-top-left-radius: 15px;
+      -webkit-border-top-right-radius: 15px;
+      -moz-border-radius-topleft: 15px;
+      -moz-border-radius-topright: 15px;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+}

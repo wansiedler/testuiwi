@@ -1,0 +1,26 @@
+.icon {
+      font-weight: normal;
+      font-style: normal;
+      speak: never;
+      font-variant: normal;
+      text-transform: none;
+      -webkit-font-smoothing: antialiased;
+      line-height: 70px;
+      padding-left: 10px;
+      padding-right: unset;
+}
+
+.icon__left {
+      border-radius: 0 40px 40px 0;
+      left: 0;
+}
+
+.icon__right {
+      border-radius: 40px 0 0 40px;
+      right: 0;
+}
+
+.icon__right:before,
+.icon__right::before {
+      content: "⟩";
+}
