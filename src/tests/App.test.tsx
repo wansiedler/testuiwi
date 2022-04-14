@@ -99,8 +99,8 @@ it("renders first slide", async () => {
 	// expect(await container.querySelector("#UIWIWidget")).toBeInTheDocument();
 	// expect(await screen.getByText(question)).toBeInTheDocument();
 	// = screen.getByTestId(/UIWIWidgetContainer/i);
-	expect(await screen.findByText(/div/i)).toBeInTheDocument();
-	// expect(await container.get("#UIWIWidgetContainer")).toBeInTheDocument();
+	expect(await screen.findByPlaceholderText(/div/i)).toBeInTheDocument();
+	// expect(await getByText("Vergleichen")).toBeInTheDocument()
 
 });
 //
