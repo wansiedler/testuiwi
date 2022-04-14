@@ -4,7 +4,7 @@ import { App } from "../uiwiwidget/App";
 import { ageUserStory } from "../uiwiwidget/components/Quiz/Age/ageUserStory";
 import { QuizState } from "../uiwiwidget/store/RTKstore";
 import { ageMockStateBase } from "../uiwiwidget/components/Quiz/Age/Storybook/mockedAgeStates";
-import { sizes, variants } from "../uiwiwidget/types";
+import { quizTypes, sizes, variants } from "../uiwiwidget/types";
 import { Provider } from "react-redux";
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import quizSlice from "../uiwiwidget/store/features/quiz/quizSlice";
@@ -12,6 +12,7 @@ import quizSlice from "../uiwiwidget/store/features/quiz/quizSlice";
 import fetchMock from "jest-fetch-mock";
 import "jest-fetch-mock";
 import * as API from "../uiwiwidget/quizAction";
+import { stories } from "../uiwiwidget/quizAction";
 // const axios = require("axios");
 // jest.mock("axios");
 
@@ -57,6 +58,11 @@ beforeEach(() => {
 		}
 	}), 10)));
 	jest.spyOn(API, "getGadget").mockImplementation(() => new Promise((res) => setTimeout(() => res("Gadget"), 10)));
+
+	// stories[quizTypes.age]["grill"]
+	const s = [...stories[quizTypes.age]["grill"].variants["variant-1"], ...stories[quizTypes.age]["grill"].slides];
+
+	jest.spyOn(API, "fetchStories").mockImplementation(() => new Promise((res) => setTimeout(() => res(s), 10)));
 });
 it("renders first slide", async () => {
 	const story = ageUserStory.grill.variants["variant-1"][0];
@@ -93,8 +99,8 @@ it("renders first slide", async () => {
 	// expect(await container.querySelector("#UIWIWidget")).toBeInTheDocument();
 	// expect(await screen.getByText(question)).toBeInTheDocument();
 	// = screen.getByTestId(/UIWIWidgetContainer/i);
-	// expect(await screen.findByText(/loaded/i)).toBeInTheDocument();
-	expect(await container.querySelector("#UIWIWidgetContainer")).toBeInTheDocument();
+	expect(await screen.findByText(/div/i)).toBeInTheDocument();
+	// expect(await container.get("#UIWIWidgetContainer")).toBeInTheDocument();
 
 });
 //
