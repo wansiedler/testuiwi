@@ -9,12 +9,8 @@ import { Provider } from "react-redux";
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import quizSlice from "../uiwiwidget/store/features/quiz/quizSlice";
 
-import fetchMock from "jest-fetch-mock";
-import "jest-fetch-mock";
 import * as API from "../uiwiwidget/quizAction";
 import { stories } from "../uiwiwidget/quizAction";
-// const axios = require("axios");
-// jest.mock("axios");
 
 export const createReduxStore = (initialState = null) => {
 	return configureStore({
@@ -28,22 +24,6 @@ export const renderTestApp = (component, options) => {
 
 	return <Provider store={store}>{component}</Provider>;
 };
-
-// test("App rendered", async () => {
-//       const { container } = render(
-//             <App
-//                   {...{
-//                         categoryName: "genuss",
-//                         clientId: 268,
-//                         uid: "1212-12412-12412"
-//                   }}
-//             />
-//       );
-//       // const linkElement = screen.getByTestId(/UIWIWidget/i);
-//       // const linkElement = screen.getByTestId(/UIWIWidgetContainer/i);
-//
-//       expect(await container.querySelector("#UIWIWidgetContainer")).toBeInTheDocument();
-// });
 
 beforeEach(() => {
 	// if you have an existing `beforeEach` just add the following line to it
@@ -65,7 +45,9 @@ beforeEach(() => {
 
 	jest.spyOn(API, "fetchStories").mockImplementation(() => new Promise((res) => setTimeout(() => res(s), 1)));
 });
-it("renders first slide", async () => {
+
+describe("Renderers", () => {
+	// fetchMock.mockResponseOnce(JSON.stringify({ data: "12345" }));
 	const story = ageUserStory.grill.variants["variant-1"][0];
 	const question = story.question;
 	let initState: QuizState = ageMockStateBase;
@@ -75,27 +57,27 @@ it("renders first slide", async () => {
 		stories: [story],
 		theme: "grill"
 	};
-	// fetchMock.mockResponseOnce(JSON.stringify({ data: "12345" }));
-	const { container, getByText } = await render(
-		renderTestApp(
-			<App
-				{...{
-					categoryName: "genuss",
-					clientId: 268,
-					uid: "1212-12412-12412"
-				}}
-			/>,
-			{
-				initialState: initState
-			}
-		)
-	);
-	await waitFor(async () => {
-		expect(await screen.findByText(question)).toBeInTheDocument();
-		// screen.debug()
-	}, {
-		timeout: 100
+	it("renders first slide", async () => {
+		const { container, getByText } = await render(
+			renderTestApp(
+				<App
+					{...{
+						categoryName: "genuss",
+						clientId: 268,
+						uid: "1212-12412-12412"
+					}}
+				/>,
+				{
+					initialState: initState
+				}
+			)
+		);
+		await waitFor(async () => {
+			expect(await screen.findByText(/loaded/i)).toBeInTheDocument();
+			// screen.debug()
+		}, {
+			timeout: 100
+		});
 	});
-
 });
 
