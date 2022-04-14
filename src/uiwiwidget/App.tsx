@@ -50,6 +50,8 @@ const PrepareWidget = ({ categoryName, uid, clientId, pageViewId, children }: { 
 	const quiz: QuizState = useAppSelector(selectQuiz);
 	const dispatch = useAppDispatch();
 
+	const [loaded, setLoaded] = useState(false)
+
 	useEffect(() => {
 		const asyncCall = async () => {
 			console.log(`categoryName: ${categoryName}`);
@@ -84,9 +86,8 @@ const PrepareWidget = ({ categoryName, uid, clientId, pageViewId, children }: { 
 
 						dispatch(setSize(sizes[quizType]));
 						await fetchStories(quiz, quizType, theme, variant).then((stories) => {
-							console.log(stories.length)
 							dispatch(setStories(stories));
-							dispatch(setLoaded(true));
+							setLoaded(true);
 							if (quizType === quizTypes.squidGame) dispatch(enableIdleSlide(false));
 						});
 
@@ -102,7 +103,7 @@ const PrepareWidget = ({ categoryName, uid, clientId, pageViewId, children }: { 
 					});
 				})
 				.catch((error) => {
-					dispatch(setLoaded(false));
+					setLoaded(false);
 					console.log(error);
 					sendEvent({
 						eventType: eventTypes.FALLBACK,
@@ -115,7 +116,7 @@ const PrepareWidget = ({ categoryName, uid, clientId, pageViewId, children }: { 
 		asyncCall();
 	}, []);
 	return <><UiWiWidget
-		loaded={quiz.loaded}
+		loaded={loaded}
 	/></>;
 };
 
