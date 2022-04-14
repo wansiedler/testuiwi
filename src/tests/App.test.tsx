@@ -79,5 +79,27 @@ describe("Renderers", () => {
 			timeout: 100
 		});
 	});
+	it("renders second slide", async () => {
+		const { container, getByText } = await render(
+			renderTestApp(
+				<App
+					{...{
+						categoryName: "genuss",
+						clientId: 268,
+						uid: "1212-12412-12412"
+					}}
+				/>,
+				{
+					initialState: initState
+				}
+			)
+		);
+		await waitFor(async () => {
+			expect(await screen.findByText(/loaded/i)).toBeInTheDocument();
+			// screen.debug()
+		}, {
+			timeout: 100
+		});
+	});
 });
 
