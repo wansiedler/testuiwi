@@ -93,11 +93,11 @@ it("renders first slide", async () => {
 		// expect(await container.querySelector("#UIWIWidget")).toBeInTheDocument();
 
 		// expect(await screen.findByText(/loaded/i)).toBeInTheDocument();
-		expect(await screen.findByText(/Die Grillsaison ist eröffnet - Kann man sie auch vegetarisch genießen/i)).toBeInTheDocument();
+		expect(await screen.findByText(/Nein, lieber mit Fleischs/i)).toBeInTheDocument();
 
-		screen.debug()
+		// screen.debug()
 	}, {
-		timeout: 1000
+		timeout: 100
 	});
 
 	// const t = await waitFor(() => screen.findByText(/loadedd/i), {
