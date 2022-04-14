@@ -11,6 +11,7 @@ export interface QuizState {
 
       experimentRoundNr: string;
 
+      loaded: boolean;
       device: string;
 
       variantId: string;
@@ -89,6 +90,7 @@ export const initialState: QuizState = quizAdapter.getInitialState({
       limbicType: limbicTypes.traditionalist,
       currentIndex: 0,
       enabledIdleSlide: false,
+      loaded: false,
       questions: [],
       answeredQuestions: {
             interests: [],
@@ -414,6 +416,9 @@ export const initSlice = {
             },
             setInteractive: (state) => {
                   state.interactive = true;
+            },
+            setLoaded: (state, { payload }) => {
+                  state.loaded = payload;
             }
       }
 };
@@ -421,6 +426,7 @@ const quizSlice = createSlice(initSlice);
 export const {
       setState,
       setStories,
+      setLoaded,
       enableIdleSlide,
       setExperimentId,
       setSubExperiment,
