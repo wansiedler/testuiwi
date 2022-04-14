@@ -48,6 +48,7 @@ export const renderTestApp = (component, options) => {
 beforeEach(() => {
 	// if you have an existing `beforeEach` just add the following line to it
 	// fetchMock.doMock();
+	// API.fetchMetaExperimentId = jest.fn().mockReturnValue({ someObjectProperty: 42 });
 	jest.spyOn(API, "fetchMetaExperimentId").mockImplementation(() => new Promise((res) => setTimeout(() => res("cxo-meta-experiment-west-merkur-genuss-nn-v3_0"), 1)));
 	jest.spyOn(API, "fetchExperimentData").mockImplementation(() => new Promise((res) => setTimeout(() => res({
 		"result": {
@@ -90,20 +91,11 @@ it("renders first slide", async () => {
 		)
 	);
 	await waitFor(async () => {
-		// expect(await container.querySelector("#UIWIWidget")).toBeInTheDocument();
-
-		// expect(await screen.findByText(/loaded/i)).toBeInTheDocument();
-		expect(await screen.findByText(/Nein, lieber mit Fleischs/i)).toBeInTheDocument();
-
+		expect(await screen.findByText(question)).toBeInTheDocument();
 		// screen.debug()
 	}, {
 		timeout: 100
 	});
-
-	// const t = await waitFor(() => screen.findByText(/loadedd/i), {
-	// 	timeout: 3000
-	// });
-	//
 
 });
 
