@@ -8,19 +8,20 @@ import { setShowProgress, setSize } from "../../../store/features/quiz/quizSlice
 import { sizes } from "../../../types";
 
 export default ({ story, onAnswer, ...props }) => {
-      const quiz = useAppSelector(selectQuiz);
-      useAppDispatch()(setSize(sizes.big));
-      useAppDispatch()(setShowProgress(true));
+	const quiz = useAppSelector(selectQuiz);
+	const dispatch = useAppDispatch();
+	dispatch(setSize(sizes.big));
+	dispatch(setShowProgress(true));
 
-      return (
-            <div className="quiz">
-                  <Question question={story.question} />
-                  {((story.subtext || props.subtext) &&
-                        <div className="subtitle">{story.subtext || props.subtext}</div>)
-                  }
-                  <Slider rtl={false} onFinalChange={onAnswer} />
-                  <StimmeZu left={story.votes[0]} right={story.votes[1]} />
-                  <Logo/>
-            </div>
-      );
-};
+	return (
+		<div className="quiz">
+			<Question question={story.question}/>
+			{((story.subtext || props.subtext) &&
+                <div className="subtitle">{story.subtext || props.subtext}</div>)
+			}
+			<Slider rtl={false} onFinalChange={onAnswer}/>
+			<StimmeZu left={story.votes[0]} right={story.votes[1]}/>
+			<Logo/>
+		</div>
+	);
+}; 
