@@ -73,7 +73,7 @@ describe("Renderers", () => {
 			)
 		);
 		await waitFor(async () => {
-			expect(await screen.findByText(/loaded/i)).toBeInTheDocument();
+			expect(await screen.findByText(/fleisch/i)).toBeInTheDocument();
 			// screen.debug()
 		}, {
 			timeout: 100
