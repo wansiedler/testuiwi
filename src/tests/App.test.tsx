@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import { App } from "../uiwiwidget/App";
 import { ageUserStory } from "../uiwiwidget/components/Quiz/Age/ageUserStory";
 import { QuizState } from "../uiwiwidget/store/RTKstore";
@@ -48,7 +48,7 @@ export const renderTestApp = (component, options) => {
 beforeEach(() => {
 	// if you have an existing `beforeEach` just add the following line to it
 	// fetchMock.doMock();
-	jest.spyOn(API, "fetchMetaExperimentId").mockImplementation(() => new Promise((res) => setTimeout(() => res("cxo-meta-experiment-west-merkur-genuss-nn-v3_0"), 10)));
+	jest.spyOn(API, "fetchMetaExperimentId").mockImplementation(() => new Promise((res) => setTimeout(() => res("cxo-meta-experiment-west-merkur-genuss-nn-v3_0"), 1)));
 	jest.spyOn(API, "fetchExperimentData").mockImplementation(() => new Promise((res) => setTimeout(() => res({
 		"result": {
 			"variant": variants["variant-3"],
@@ -56,13 +56,13 @@ beforeEach(() => {
 			"sub_experiment": "age-grill-genuss",
 			"meta_experiment_variant": "variant-3"
 		}
-	}), 10)));
-	jest.spyOn(API, "getGadget").mockImplementation(() => new Promise((res) => setTimeout(() => res("Gadget"), 10)));
+	}), 1)));
+	jest.spyOn(API, "getGadget").mockImplementation(() => new Promise((res) => setTimeout(() => res("Gadget"), 1)));
 
 	// stories[quizTypes.age]["grill"]
 	const s = [...stories[quizTypes.age]["grill"].variants["variant-1"], ...stories[quizTypes.age]["grill"].slides];
 
-	jest.spyOn(API, "fetchStories").mockImplementation(() => new Promise((res) => setTimeout(() => res(s), 10)));
+	jest.spyOn(API, "fetchStories").mockImplementation(() => new Promise((res) => setTimeout(() => res(s), 1)));
 });
 it("renders first slide", async () => {
 	const story = ageUserStory.grill.variants["variant-1"][0];
@@ -89,23 +89,21 @@ it("renders first slide", async () => {
 			}
 		)
 	);
+	await waitFor(async () => {
+		// expect(await container.querySelector("#UIWIWidget")).toBeInTheDocument();
 
-	// axios.get.mockReturnValue(response);
-	// const data = await getData()
-	// expect(axios.get).toBeCalledTimes(1);
-	// expect(data).toEqual(['1', '2', 3])
-	// expect(data).toMatchSnapshot()
+		// expect(await screen.findByText(/loaded/i)).toBeInTheDocument();
+		expect(await screen.findByText(/Ja, viel lieber vegetarisch/i)).toBeInTheDocument();
 
-	// expect(await container.querySelector("#UIWIWidget")).toBeInTheDocument();
-	// expect(await screen.getByText(question)).toBeInTheDocument();
-	// = screen.getByTestId(/UIWIWidgetContainer/i);
-	expect(await screen.findByPlaceholderText(/div/i)).toBeInTheDocument();
-	// expect(await getByText("Vergleichen")).toBeInTheDocument()
+		// screen.debug()
+	}, {
+		timeout: 1000
+	});
+
+	// const t = await waitFor(() => screen.findByText(/loadedd/i), {
+	// 	timeout: 3000
+	// });
+	//
 
 });
-//
-// it("should find a result via fetch", () => {
-//       return fetch("http://www.google.com")
-//             .then(() => console.log("Success"))
-//             .catch((err) => console.log("Error!!!!" + err));
-// });
+
