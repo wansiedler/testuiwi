@@ -92,7 +92,10 @@ it("renders first slide", async () => {
 
 	// expect(await container.querySelector("#UIWIWidget")).toBeInTheDocument();
 	// expect(await screen.getByText(question)).toBeInTheDocument();
-	expect(await screen.findByText(/loaded/i)).toBeInTheDocument();
+	// = screen.getByTestId(/UIWIWidgetContainer/i);
+	// expect(await screen.findByText(/loaded/i)).toBeInTheDocument();
+	expect(await container.querySelector("#UIWIWidgetContainer")).toBeInTheDocument();
+
 });
 //
 // it("should find a result via fetch", () => {
