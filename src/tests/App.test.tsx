@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen, waitFor } from "@testing-library/react";
+import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import { App } from "../uiwiwidget/App";
 import { ageUserStory } from "../uiwiwidget/components/Quiz/Age/ageUserStory";
 import { QuizState } from "../uiwiwidget/store/RTKstore";
@@ -46,7 +46,7 @@ beforeEach(() => {
 	jest.spyOn(API, "fetchStories").mockImplementation(() => new Promise((res) => setTimeout(() => res(s), 1)));
 });
 
-describe("Renderers", () => {
+describe("Age grill renderers", () => {
 	// fetchMock.mockResponseOnce(JSON.stringify({ data: "12345" }));
 	const story = ageUserStory.grill.variants["variant-1"][0];
 	const question = story.question;
@@ -73,7 +73,8 @@ describe("Renderers", () => {
 			)
 		);
 		await waitFor(async () => {
-			expect(await screen.findByText(/fleisch/i)).toBeInTheDocument();
+			// expect(await screen.findByText(/fleisch/i)).toBeInTheDocument();
+			expect(await screen.findByText(/fleisch/i)).toBeVisible();
 			// screen.debug()
 		}, {
 			timeout: 100
@@ -94,8 +95,10 @@ describe("Renderers", () => {
 				}
 			)
 		);
+
 		await waitFor(async () => {
-			expect(await screen.findByText(/loaded/i)).toBeInTheDocument();
+			fireEvent.click(getByText(/click me nao/i));
+			// expect(await screen.findByText(/loaded/i)).toBeInTheDocument();
 			// screen.debug()
 		}, {
 			timeout: 100
